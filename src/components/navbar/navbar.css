@@ -1,0 +1,57 @@
+.nav-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.nav-bar .menu-icon img{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    visibility: hidden;
+}
+
+.nav-bar .nav-links a{
+    margin: 35px
+}
+
+.nav-links a {
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links a.active:after {
+    content: '';
+    display: block;
+    width: 100%; /* Full width to indicate active state */
+    height: 2px; /* Height of the underline */
+    background: rgb(86, 116, 97); /* Color of the underline */
+    position: absolute;
+    bottom: -5px; /* Distance of the underline from the text */
+    left: 0;
+  }
+  
+.nav-links a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; /* Height of the underline */
+    background: rgb(86, 116, 97);
+    transition: width 300ms ease-in; /* Animate width */
+    position: absolute;
+    bottom: -5px; /* Distance of the underline from the text */
+    left: 0;
+  }
+
+  .nav-links a:hover:after {
+    width: 100%; /* Full width on hover */
+  }
